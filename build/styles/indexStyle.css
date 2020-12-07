@@ -1,0 +1,26 @@
+@import "globalStyle.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--pitch_black);
+}
+
+/* My intro header words */
+.intro-h {
+    transform: translate(0%, 0%);
+    color: var(--whitesmoke);
+    z-index: 10000;
+    width: 50%;
+    font-size: clamp(25px, 1vw, 30px);
+}
+
+@media (max-width: 470px) {
+    .intro-h {
+        transition: 0.5s;
+        font-size: 18px;
+    }
+}

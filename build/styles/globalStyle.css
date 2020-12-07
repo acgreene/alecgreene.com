@@ -1,0 +1,25 @@
+/* FONTS
+    (1) Go to fonts.google.com .
+    (2) Find font you like.
+    (3) Select the font family. 
+    (4) Copy and paste the @import, as well as CSS rules into the locations below. 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* COLOR PALETTE */
+:root {
+    --light_slate_grey: rgb(119,136,153);
+    --slate_grey: rgb(112,128,144);
+    --light_steel_blue: rgb(176,196,222);
+    --lavender: rgb(230,230,250);
+    --whitesmoke: whitesmoke;
+    --light_black: rgb(10, 11, 12);
+    --pitch_black: rgb(7, 7, 7);
+}
