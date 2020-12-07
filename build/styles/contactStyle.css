@@ -1,5 +1,185 @@
- /* Set the size of the div element that contains the map */
-    #map {
-        height: 400px;
-        width: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container .text h2 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container .text p {
+    transform: translateY(10px);
+}
+
+/*  Top of contact form text */
+.text {
+    color: var(--whitesmoke);
+}
+
+/* The entire contact form container */
+.container{
+    width: clamp(600px, 50%, 800px);
+    padding: 25px 40px 10px 40px;
+}
+
+.container .text{
+    text-align: center;
+}
+
+.container form{
+    padding: 30px 0 0 0;
+}
+
+.container form .form-row{
+    display: flex;
+    margin: 32px 0;
+}
+
+/* Text inside the form boxes (name, email, subj, msg) */
+form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+    color: var(--whitesmoke);
+}
+
+/* Space inside each entry box + entry text */
+.input-data input,
+.textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+    background-color: transparent;
+    color: var(--whitesmoke);
+}
+
+/* Action: what happens to the text inside the data boxes as it moves upward. */
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: var(--slate_grey);
+}
+
+/* Contact form underline animations. Animation is created by creating a linear gradient, 
+    making the background gigantic, and then keyframing the position of the background. */
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn .input-data{
+    overflow: hidden;
+}
+
+.submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: var(--whitesmoke);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(120%);
+}
+
+@media (max-width: 700px) {
+
+  .container .text .h2{
+        font-size: 30px;
+  }
+
+  .container form{
+        padding: 0px 0 0 0;
+  }
+
+  .container form .form-row{
+        display: block;
+  }
+
+  form .form-row .input-data{
+        margin: 35px 0!important;
+  }
+
+  .submit-btn .input-data{
+        width: 100%!important;
+  }
+
+}
+
+@media (max-height: 700px) {
+
+    p {
+          font-size: 14px;
     }
+    
+  }

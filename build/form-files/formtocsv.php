@@ -32,5 +32,5 @@ $txt = "Beep, Boop. You have received an e-mail from ".$name.".\n\n".$msg;
 mail($me, $subj, $txt, $headers);
 
 //re-directs the user back to the contact page so that they don't see the php. 
-header("Location: ../contact.html");
+header("Location: ../contact.php");
 ?>

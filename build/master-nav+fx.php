@@ -32,9 +32,12 @@
             <a href="contact.php">Contact</a>
 
             <div class = "socialmobile-nav"> 
-                <a class="linkedin" href="https://www.linkedin.com/in/alecgreene/" target="_blank"><span data-feather="linkedin"></span></a>
-                <a class="twtr" href="https://twitter.com/aleccgreene" target="_blank"><span data-feather="twitter"></span></a>
-                <a class="git" href="https://github.com/acgreene" target="_blank"><span data-feather="github"></span></a>
+                <br> <br>
+                <a class="git-s" href="https://github.com/acgreene" target="_blank"><span data-feather="github"></span></a>
+                <br>
+                <a class="linkedin-s" href="https://www.linkedin.com/in/alecgreene/" target="_blank"><span data-feather="linkedin"></span></a>
+                <br>
+                <a class="twtr-s" href="https://twitter.com/aleccgreene" target="_blank"><span data-feather="twitter"></span></a>
             </div> 
         </div>
 
@@ -70,7 +73,7 @@
                 pixels.style.left = x+'px';
                 pixels.style.top = y+'px';
 
-                var size = Math.random() * 2;
+                var size = Math.random() * 2.1;
                 pixels.style.width = 1.3*size+'px';
                 pixels.style.height = size+'px';
 
@@ -262,7 +265,7 @@
                 transform: scale3d(1.3,1.3,1.3);
             }
 
-            @media screen and (min-width: 470px) {
+            @media screen and (min-width: 703px) {
                 .open-mobile {
                     display: none;
                 }
@@ -296,9 +299,7 @@
             }
 
             .mymobile-nav .socialmobile-nav a {
-                display: block;
                 left: 1em;
-                transform: translateY(-20rem);
             }
 
             /* Position and style the close button (top left corner) */
@@ -322,7 +323,7 @@
                 .mymobile-nav a {font-size: 18px;}
             }
 
-            @media screen and (min-width: 470px) {
+            @media screen and (min-width: 703px) {
                 .mymobile-nav {
                     display: none;
                 }
@@ -350,7 +351,7 @@
                 }
             }
 
-            @media (max-width: 470px) {
+            @media (max-width: 703px) {
                 ul li {
                     display: none;
                 }

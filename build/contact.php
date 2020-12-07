@@ -1,4 +1,4 @@
-<?php include "master-nav+fx.php";?>
+<?php include "master-nav+fx.php"; ?>
 <html lang="en-US">
     <head>
         <title> Contact // Alec Greene </title>
@@ -7,7 +7,68 @@
         <link rel="stylesheet" href="styles/globalStyle.css">
         <link rel="stylesheet" href="styles/contactStyle.css">
 
-        <script
+        <!-- Must add this for @media functionality -->
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="text">
+                
+                <h2> Contact me </h2>
+
+                <p> I am interested in both full time employment and freelance 
+                    opportunities &#8211; especially ambitious or large projects. 
+                    However, if you have another request or question, don&#8217;t 
+                    hesitate to contact me using the form below. 
+                </p>
+
+            </div>
+            <form method="post" action="form-files/formtocsv.php">
+                <div class="form-row">
+
+                    <div class="input-data">
+                        <input type="text" required name="form_name">
+                        <div class="underline"></div>
+                        <label for="">Name</label>
+                    </div>  
+
+                    <div class="input-data">
+                        <input type="text" required name="form_email">
+                        <div class="underline"></div>
+                        <label for="">Email</label>
+                    </div>
+
+                </div>
+                <div class="form-row">
+
+                    <div class="input-data">
+                        <input type="text" required name="form_subj">
+                        <div class="underline"></div>
+                        <label for="">Subject</label>
+                    </div>
+
+                </div>
+                <div class="form-row">
+
+                    <div class="input-data">
+                        <input type="text" required name="form_msg">
+                        <div class="underline"></div>
+                        <label for="">Message</label>
+                    </div>
+
+                </div>
+
+                <div class="submit-btn">
+                        <div class="input-data">
+                            <input type="submit" value="submit">
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+
+        <!-- <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBta-IIJJrLzKVJtgc8TrJpj35b3gp1vpI&callback=initMap&libraries=&v=weekly"
             defer
         ></script>
@@ -27,49 +88,6 @@
             }
         </script>
 
-    </head>
-
-    <body>
-
-        <h1> Contact me </h1>
-        
-        <p> I am interested in both full-time work and freelance opportunities &#8211; especially ambitious or large projects. 
-            However, if you have another request or question, don&#8217;t hesitate to contact me using the form below. 
-        </p>
-
-        <!--Form Element: 
-            (1) action: defines location where to send the form's collected data.  
-            (2) method: defines which http method to send the data with (usually "get" or "post")
-        -->
-        <form method="post" action="form-files/formtocsv.php">
-        <ul>
-            <li>
-                <label for="name"> Name </label>
-                <input type="text" id="name" name="form_name">
-            </li>
-
-            <li>
-                <label for="mail"> Email </label>
-                <input type="email" id="mail" name="form_email">
-            </li>
-
-            <li> 
-                <label for="subj"> Subject </label>
-                <input type="text" id="subj" name="form_subj">
-            </li>
-
-            <li>
-                <label for="msg"> Message </label>
-                <textarea id="msg" name="form_msg"></textarea>
-            </li>
-
-            <li class="button">
-                <button type="submit"> Send </button>
-            </li>
-
-        </ul>
-        </form>
-
         <div class="inf-map">
             Alec Greene,<br/>
             Ann Arbor, Michigan, USA. (810) 844 6445.
@@ -78,7 +96,7 @@
 
         <div class="map-wrap">
             <div id="map"></div>
-        </div>
-        
+        </div> -->
+
     </body>
 </html>

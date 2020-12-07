@@ -1,10 +1,4 @@
-<?php 
-  // require __DIR__.'../vendor/autoload.php';
-  // use Kreait\Firebase\Factory;
-
-  // $factory = (new Factory())->withDatabaseUri('https://alecgreene-default-rtdb.firebaseio.com/');
-  include "master-nav+fx.php";
-?>
+<?php include "master-nav+fx.php"; ?>
 
 <html lang="en-US">
 
@@ -54,17 +48,6 @@
                 </div>
         </div>
 
-        <!-- <a href="master-nav+fx.php">TEST PAGE</a> -->
-
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="/__/firebase/8.1.2/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
-
-        <!-- Initialize Firebase -->
-        <script src="/__/firebase/init.js"></script>
-        
         <script>
             feather.replace()
         </script>
