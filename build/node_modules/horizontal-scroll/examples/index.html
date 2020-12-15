@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Horizontal Scroll</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style>
+
+			html, body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			body {
+				margin: 0;
+			}
+
+			h1 {
+				margin: 50px;
+				font-family: Helvetica;
+			}
+
+			.block{
+				width: 400px;
+				height: 200px;
+				margin: 50px;
+			}
+
+			.container{
+				margin-top: 200px;
+			}
+
+			h2{
+				font-size: 80px;
+				font-family: Helvetica;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Horizontal scroll</h1>
+		<div class="container">
+
+			<div class="block">
+				<h2>Item 1</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 2</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 3</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 4</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 5</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 6</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 7</h2>
+			</div>
+
+			<div class="block">
+				<h2>Item 8</h2>
+			</div>
+
+		</div>
+		<script src="../dist/index.js"></script>
+		<script>
+
+			var blocks = document.getElementsByClassName('block');
+			var container = document.getElementsByClassName('container');
+			var hs = new HorizontalScroll.default({
+				blocks : blocks,
+				container: container,
+				isAnimated: true,
+				springEffect: 0.8
+			});
+
+		</script>
+	</body>
+</html>

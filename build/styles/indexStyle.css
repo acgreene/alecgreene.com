@@ -1,26 +1,75 @@
-@import "globalStyle.css";
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-    background-color: var(--pitch_black);
+.block {
+    position: relative;
+    width: 580px;
+    height: 460px;
+    margin: 10px 300px 20px 80px;
+    border-radius: 20px;
+    transition: 1s;
 }
 
-/* My intro header words */
-.intro-h {
-    transform: translate(0%, 0%);
+.block:hover {
+    transform: scale(1.025); 
+    transition: 1s;
+}
+
+a:link, a:visited {
+    text-decoration: none;
     color: var(--whitesmoke);
-    z-index: 10000;
-    width: 50%;
-    font-size: clamp(25px, 1vw, 30px);
 }
 
-@media (max-width: 470px) {
-    .intro-h {
-        transition: 0.5s;
-        font-size: 18px;
-    }
+h1 {
+    position: absolute;
+    font-weight: lighter;
+    font-size: 64px;
+}
+
+.block-name {
+    position: relative;
+    width: 580px;
+    height: 1px;
+    padding-right: 200px;
+}
+
+.block-name h1 {
+    align-content: center;
+    justify-content: center;
+    bottom: 150px;
+}
+
+h2 {
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    bottom: 100px;
+    font-weight: lighter;
+}
+
+.block-1 {
+    background: url(../images/jpg/suit.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-2 {
+    background: url(../images/jpg/code.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-3 {
+    background: url(../images/jpg/daw.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.block-1 h1,
+.block-3 h1 {
+    bottom: 0;
+    right: -60px;
+}
+
+.block-2 h1 {
+    right: -60px;
 }

@@ -23,3 +23,243 @@
     --light_black: rgb(10, 11, 12);
     --pitch_black: rgb(7, 7, 7);
 }
+
+/* General background colors */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--whitesmoke);
+    background: var(--pitch_black);
+    overflow: hidden;
+    cursor: none;
+}
+
+/* ------------------------------------------- */
+/* ALL SOCIAL MEDIA ICON STYLING IS BELOW HERE */
+/* ------------------------------------------- */
+
+/* Home button is placed in top left */
+.home {
+    position:absolute;
+    top: 30;
+    left: 30;
+    padding: 10px 17px;
+    color: var(--whitesmoke);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.home:hover {
+    color: rgb(52, 168, 83);
+    transition: 0.6s;
+}
+
+/* Contact button is with social media bar in top right */
+.contact {
+    position:absolute;
+    top: 30;
+    right: 195;
+    padding: 10px 17px;
+    color: var(--whitesmoke);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.contact:hover {
+    color: rgb(187, 0, 27);
+    transition: 0.6s;
+}
+
+/* linkedin button is with social media bar in top right */
+.linkedin {
+    position:absolute;
+    top: 30;
+    right: 85;
+    padding: 10px 17px;
+    color: var(--whitesmoke);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.linkedin:hover {
+    color: rgb(14, 118, 168);
+    transition: 0.6s;
+}
+
+/* github button is with social media bar in top right */
+.git {
+    position:absolute;
+    top: 30;
+    right: 140;
+    padding: 10px 17px;
+    color: var(--whitesmoke);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.git:hover {
+    color: rgb(110, 84, 148);
+    transition: 0.6s;
+}
+
+/* twitter button is with social media bar in top right */
+.twtr {
+    position:absolute;
+    top: 30;
+    right: 30;
+    padding: 10px 17px;
+    color: var(--whitesmoke);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.twtr:hover {
+    color: rgb(0, 172, 238);
+    transition: 0.6s;
+}
+
+/* ----------------------------------------------- */
+/* MOBILE NAVIGATION MENU COMPATABILITY BELOW HERE */
+/* ----------------------------------------------- */
+
+.open-mobile {
+    position: fixed;
+    top: 15;
+    left: 15;
+    color: var(--light_steel_blue);
+    transform: scale3d(1.3,1.3,1.3);
+}
+
+@media screen and (min-width: 703px) {
+    .open-mobile {
+        display: none;
+    }
+}
+
+.mymobile-nav {
+    height: 100%; 
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; 
+    left: 0;
+    background-color: var(--light_black);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+/* The navigation menu links */
+.mymobile-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--light_steel_blue);
+    display: block;
+    transition: 0.3s;
+}
+
+.mymobile-nav a:hover {
+    color: var(--whitesmoke);
+}
+
+.mymobile-nav .socialmobile-nav a {
+    left: 1em;
+}
+
+/* Position and style the close button (top left corner) */
+.mymobile-nav .close-mobile {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Push the page content to the right when mobile-nav opens */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the mobile-nav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .mymobile-nav {padding-top: 15px;}
+    .mymobile-nav a {font-size: 18px;}
+}
+
+@media screen and (min-width: 703px) {
+    .mymobile-nav {
+        display: none;
+    }
+}
+
+/* ------------------------------------ */
+/* ALL CURSOR ANIMATIONS ARE BELOW HERE */
+/* ------------------------------------ */
+
+.cursor {
+    position: absolute;
+    background: var(--whitesmoke);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.cursor.active {
+    opacity: 1;
+    transform: scale(4);
+    cursor: none;
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+}
