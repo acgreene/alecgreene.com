@@ -13,8 +13,14 @@
         <!-- Links to JavaScript libraries -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <!-- <script src="node_modules/Blotter-master/build/blotter.min.js"></script> -->
+        <!-- <script src="node_modules/three.js-master/build/three.js"></script>
+        <script src="node_modules/underscore.js"></script> -->
 
+        <!-- Links to all Blotter text fX libraries -->
+        <!-- <script src="node_modules/Blotter-master/build/blotter.min.js"></script>
+        <script src="node_modules/Blotter-master/build/materials/rollingDistortMaterial.js"></script>
+        <script src="node_modules/Blotter-master/build/materials/fliesMaterial.js"></script> -->
+    
     </head>
 
     <body> 

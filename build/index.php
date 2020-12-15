@@ -34,9 +34,6 @@
       <!-- Must add this for @media functionality -->
       <meta name ="viewport" content="width=device-width, initial-scale=1">
 
-      <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
-      <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"></script>
-
     </head>
     <body>
 
@@ -45,7 +42,7 @@
 
         <div class="block block-name">
         <div id="distortion-text"></div>
-            <h1><br> electrical & sound engineer. </h1>
+            <h1>Alec Greene,<br> electrical & sound engineer. </h1>
             <h2>signal processing specialist / audiophile / programming hobbyist. </h2>
         </div>
 
@@ -62,37 +59,6 @@
         </div>
         
       </div>
-
-      
-      <div id="main"></div>
-
-      <script>
-
-          container = document.getElementById("main");
-
-          var text = new Blotter.Text("alec greene", {
-            //   family: "serif",
-              size: 135,
-              fill: "whitesmoke",
-              paddingLeft: 80,
-              paddingRight: 80,
-              paddingTop: 80,
-              paddingBottom: 80
-          });
-
-          var material = new Blotter.FliesMaterial();
-          material.uniforms.uPointCellWidth.value = 0.003;
-          material.uniforms.uPointRadius.value = 0.67;
-          material.uniforms.uSpeed.value = 2;
-
-          var blotter = new Blotter(material, {
-              texts: text
-          });
-
-          var scope = blotter.forText(text);
-          scope.appendTo(container);
-
-      </script>
 
       <!-- JavaScript menu block horizontal animation -->
       <script src="node_modules/horizontal-scroll/dist/index.js"></script>
