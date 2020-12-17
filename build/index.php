@@ -38,27 +38,28 @@
     <body>
 
       <!-- Menu Blocks -->
-      <div class="container">
-
-        <div class="block block-name">
-        <div id="distortion-text"></div>
-            <h1>Alec Greene,<br> electrical & sound engineer. </h1>
-            <h2>signal processing specialist / audiophile / programming hobbyist. </h2>
-        </div>
-
-        <div style="cursor: none;" onclick="window.location='about.php';" class="block block-1">
-            <h1>about</h1>
-        </div> 
-
-        <div style="cursor: none;" onclick="window.location='eecs.php';" class="block block-2">
-            <h1>engineering</h1>
-        </div>
-
-        <div style="cursor: none;" onclick="window.location='audio.php';" class="block block-3">
-            <h1>audio</h1>
-        </div>
         
-      </div>
+        <div class="container">
+
+            <div class="block block-name">
+            <div id="distortion-text"></div>
+                <h1>Alec Greene,<br> electrical & sound engineer. </h1>
+                <h2>signal processing specialist / audiophile / programming hobbyist. </h2>
+            </div>
+
+            <div style="cursor: none;" onclick="window.location='about.php';" class="block block-1">
+                <h1>about</h1>
+            </div> 
+
+            <div style="cursor: none;" onclick="window.location='eecs.php';" class="block block-2">
+                <h1>engineering</h1>
+            </div>
+
+            <div style="cursor: none;" onclick="window.location='audio.php';" class="block block-3">
+                <h1>audio</h1>
+            </div>
+                
+        </div>
 
       <!-- JavaScript menu block horizontal animation -->
       <script src="node_modules/horizontal-scroll/dist/index.js"></script>
@@ -127,5 +128,6 @@
                 follower.removeClass("active");
             });
         </script>
+
     </body>
 </html>
